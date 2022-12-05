@@ -20,5 +20,9 @@
 </html>
 
 <script>
-  // code here
+  const value = document.querySelectorAll(".form-input");
+  
+  value.forEach((element)=>{
+    console.log(`${element.previousElementSibling.textContent}${element.value}`);
+  });
 </script>
