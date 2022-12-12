@@ -1,5 +1,10 @@
 function uncompletedNotes(notes) {
-  notes.forEach(element => element.todos.filter(object => object.done ===false) );
+  let newArray = [];
+  notes.forEach((value) => {
+    let uncompletedTodos = value.todos.filter((obj) => obj.done === false);
+    newArray.push(uncompletedTodos);
+  });
+  console.log(newArray);
 }
 
 
