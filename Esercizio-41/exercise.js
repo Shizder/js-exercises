@@ -4,11 +4,8 @@ const user = {
   age: 25,
 };
 
-const userData = JSON.stringify(user);
+localStorage.setItem('user', JSON.stringify(user));
+let userData = JSON.parse(localStorage.getItem('user'));
+console.log(userData);
 
-//save it with local storage
-localStorage.setItem('user', userData);
-
-//(convert it back JSON)
-let anotherUser = JSON.parse(localStorage.getItem('user'));
 
